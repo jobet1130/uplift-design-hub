@@ -21,7 +21,7 @@ const ProgramCard = ({
 }: ProgramCardProps) => {
   return (
     <div className={cn(
-      "group bg-card rounded-xl shadow-soft hover:shadow-medium transition-smooth overflow-hidden",
+      "group bg-card rounded-xl shadow-soft hover:shadow-medium transition-smooth overflow-hidden flex flex-col h-full",
       className
     )}>
       {/* Image */}
@@ -34,16 +34,16 @@ const ProgramCard = ({
       </div>
       
       {/* Content */}
-      <div className="p-6 space-y-4">
-        <h3 className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-smooth">
+      <div className="p-6 flex flex-col h-full">
+        <h3 className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-smooth mb-4">
           {title}
         </h3>
         
-        <p className="text-muted-foreground font-body leading-relaxed">
+        <p className="text-muted-foreground font-body leading-relaxed flex-grow mb-6">
           {description}
         </p>
         
-        <Button variant="outline" className="group/btn" asChild>
+        <Button variant="outline" className="group/btn mt-auto" asChild>
           <a href={buttonLink}>
             {buttonText}
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-smooth" />
